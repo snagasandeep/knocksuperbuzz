@@ -1,0 +1,203 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Knocksuperbuzz by snagasandeep</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+      <header>
+        <h1>Knocksuperbuzz</h1>
+        <p></p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="https://github.com/snagasandeep/knocksuperbuzz" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/snagasandeep/knocksuperbuzz/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/snagasandeep/knocksuperbuzz/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        
+
+
+
+
+
+
+
+
+fCol='444444';
+sCol='FF0000';
+mCol='444444';
+hCol='444444';
+Ybase=30;
+Xbase=30;
+H='...';
+H=H.split('');
+M='....';
+M=M.split('');
+S='.....';
+S=S.split('');
+NS4=(document.layers);
+NS6=(document.getElementById&amp;&amp;!document.all);
+IE4=(document.all);
+Ypos=0;
+Xpos=0;
+dots=12;
+Split=360/dots;
+if (NS6){
+for (i=1; i &lt; dots+1; i++){
+document.write('&lt;div id="n6Digits'+i+'" style="position:absolute;top:0px;left:0px;width:30px;height:30px;font-family:Arial;font-size:10px;color:#'+fCol+';text-align:center;padding-top:10px"&gt;'+i+'&lt;/div&gt;');
+}
+for (i=0; i &lt; M.length; i++){
+document.write('&lt;div id="Ny'+i+'" style="position:absolute;top:0px;left:0px;width:2px;height:2px;font-size:2px;background:#'+mCol+'"&gt;&lt;/div&gt;');
+}
+for (i=0; i &lt; H.length; i++){
+document.write('&lt;div id="Nz'+i+'" style="position:absolute;top:0px;left:0px;width:2px;height:2px;font-size:2px;background:#'+hCol+'"&gt;&lt;/div&gt;');
+}
+for (i=0; i &lt; S.length; i++){
+document.write('&lt;div id="Nx'+i+'" style="position:absolute;top:0px;left:0px;width:2px;height:2px;font-size:2px;background:#'+sCol+'"&gt;&lt;/div&gt;');
+}
+}
+if (NS4){
+dgts='1 2 3 4 5 6 7 8 9 10 11 12';
+dgts=dgts.split(' ')
+for (i=0; i &lt; dots; i++){
+document.write('&lt;layer name=nsDigits'+i+' top=0 left=0 height=30 width=30&gt;&lt;center&gt;&lt;font face=Arial size=1 color='+fCol+'&gt;'+dgts[i]+'&lt;/font&gt;&lt;/center&gt;&lt;/layer&gt;');
+}
+for (i=0; i &lt; M.length; i++){
+document.write('&lt;layer name=ny'+i+' top=0 left=0 bgcolor='+mCol+' clip="0,0,2,2"&gt;&lt;/layer&gt;');
+}
+for (i=0; i &lt; H.length; i++){
+document.write('&lt;layer name=nz'+i+' top=0 left=0 bgcolor='+hCol+' clip="0,0,2,2"&gt;&lt;/layer&gt;');
+}
+for (i=0; i &lt; S.length; i++){
+document.write('&lt;layer name=nx'+i+' top=0 left=0 bgcolor='+sCol+' clip="0,0,2,2"&gt;&lt;/layer&gt;');
+}
+}
+if (IE4){
+document.write('&lt;div style="position:absolute;top:0px;left:0px"&gt;&lt;div style="position:relative"&gt;');
+for (i=1; i &lt; dots+1; i++){
+document.write('&lt;div id="ieDigits" style="position:absolute;top:0px;left:0px;width:30px;height:30px;font-family:Arial;font-size:10px;color:'+fCol+';text-align:center;padding-top:10px"&gt;'+i+'&lt;/div&gt;');
+}
+document.write('&lt;/div&gt;&lt;/div&gt;')
+document.write('&lt;div style="position:absolute;top:0px;left:0px"&gt;&lt;div style="position:relative"&gt;');
+for (i=0; i &lt; M.length; i++){
+document.write('&lt;div id=y style="position:absolute;width:2px;height:2px;font-size:2px;background:'+mCol+'"&gt;&lt;/div&gt;');
+}
+document.write('&lt;/div&gt;&lt;/div&gt;')
+document.write('&lt;div style="position:absolute;top:0px;left:0px"&gt;&lt;div style="position:relative"&gt;');
+for (i=0; i &lt; H.length; i++){
+document.write('&lt;div id=z style="position:absolute;width:2px;height:2px;font-size:2px;background:'+hCol+'"&gt;&lt;/div&gt;');
+}
+document.write('&lt;/div&gt;&lt;/div&gt;')
+document.write('&lt;div style="position:absolute;top:0px;left:0px"&gt;&lt;div style="position:relative"&gt;');
+for (i=0; i &lt; S.length; i++){
+document.write('&lt;div id=x style="position:absolute;width:2px;height:2px;font-size:2px;background:'+sCol+'"&gt;&lt;/div&gt;');
+}
+document.write('&lt;/div&gt;&lt;/div&gt;')
+}
+function clock(){
+time = new Date ();
+secs = time.getSeconds();
+sec = -1.57 + Math.PI * secs/30;
+mins = time.getMinutes();
+min = -1.57 + Math.PI * mins/30;
+hr = time.getHours();
+hrs = -1.57 + Math.PI * hr/6 + Math.PI*parseInt(time.getMinutes())/360;
+if (NS6){
+Ypos=window.pageYOffset+window.innerHeight-Ybase-25;
+Xpos=window.pageXOffset+window.innerWidth-Xbase-30;
+for (i=1; i &lt; dots+1; i++){
+ document.getElementById("n6Digits"+i).style.top=Ypos-15+Ybase*Math.sin(-1.56 +i *Split*Math.PI/180)
+ document.getElementById("n6Digits"+i).style.left=Xpos-15+Xbase*Math.cos(-1.56 +i*Split*Math.PI/180)
+ }
+for (i=0; i &lt; S.length; i++){
+ document.getElementById("Nx"+i).style.top=Ypos+i*Ybase/4.1*Math.sin(sec);
+ document.getElementById("Nx"+i).style.left=Xpos+i*Xbase/4.1*Math.cos(sec);
+ }
+for (i=0; i &lt; M.length; i++){
+ document.getElementById("Ny"+i).style.top=Ypos+i*Ybase/4.1*Math.sin(min);
+ document.getElementById("Ny"+i).style.left=Xpos+i*Xbase/4.1*Math.cos(min);
+ }
+for (i=0; i &lt; H.length; i++){
+ document.getElementById("Nz"+i).style.top=Ypos+i*Ybase/4.1*Math.sin(hrs);
+ document.getElementById("Nz"+i).style.left=Xpos+i*Xbase/4.1*Math.cos(hrs);
+ }
+}
+if (NS4){
+Ypos=window.pageYOffset+window.innerHeight-Ybase-20;
+Xpos=window.pageXOffset+window.innerWidth-Xbase-30;
+for (i=0; i &lt; dots; ++i){
+ document.layers["nsDigits"+i].top=Ypos-5+Ybase*Math.sin(-1.045 +i*Split*Math.PI/180)
+ document.layers["nsDigits"+i].left=Xpos-15+Xbase*Math.cos(-1.045 +i*Split*Math.PI/180)
+ }
+for (i=0; i &lt; S.length; i++){
+ document.layers["nx"+i].top=Ypos+i*Ybase/4.1*Math.sin(sec);
+ document.layers["nx"+i].left=Xpos+i*Xbase/4.1*Math.cos(sec);
+ }
+for (i=0; i &lt; M.length; i++){
+ document.layers["ny"+i].top=Ypos+i*Ybase/4.1*Math.sin(min);
+ document.layers["ny"+i].left=Xpos+i*Xbase/4.1*Math.cos(min);
+ }
+for (i=0; i &lt; H.length; i++){
+ document.layers["nz"+i].top=Ypos+i*Ybase/4.1*Math.sin(hrs);
+ document.layers["nz"+i].left=Xpos+i*Xbase/4.1*Math.cos(hrs);
+ }
+}
+if (IE4){
+Ypos=document.body.scrollTop+window.document.body.clientHeight-Ybase-20;
+Xpos=document.body.scrollLeft+window.document.body.clientWidth-Xbase-20;
+for (i=0; i &lt; dots; ++i){
+ ieDigits[i].style.pixelTop=Ypos-15+Ybase*Math.sin(-1.045 +i *Split*Math.PI/180)
+ ieDigits[i].style.pixelLeft=Xpos-15+Xbase*Math.cos(-1.045 +i *Split*Math.PI/180)
+ }
+for (i=0; i &lt; S.length; i++){
+ x[i].style.pixelTop =Ypos+i*Ybase/4.1*Math.sin(sec);
+ x[i].style.pixelLeft=Xpos+i*Xbase/4.1*Math.cos(sec);
+ }
+for (i=0; i &lt; M.length; i++){
+ y[i].style.pixelTop =Ypos+i*Ybase/4.1*Math.sin(min);
+ y[i].style.pixelLeft=Xpos+i*Xbase/4.1*Math.cos(min);
+ }
+for (i=0; i &lt; H.length; i++){
+ z[i].style.pixelTop =Ypos+i*Ybase/4.1*Math.sin(hrs);
+ z[i].style.pixelLeft=Xpos+i*Xbase/4.1*Math.cos(hrs);
+ }
+}
+setTimeout('clock()',100);
+}
+clock();
+<p><a target="_blank" href="http://WWW.KNOCKSUPERBUZZ.BLOGSPOT.COM/">KNOCKSUPERBUZZ</a></p>
+      </section>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/snagasandeep">snagasandeep</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
