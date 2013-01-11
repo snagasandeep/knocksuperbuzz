@@ -1,5 +1,11 @@
-<HTML>
-<HEAD>SCRIPT type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=addthis"></SCRIPT>
+<!DOCTYPE>
+<HTML xmlns="http://www.w3.org/1999/xhtml">
+    <HEAD>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content=" AddThis is a free way to boost traffic back to your site by making it easier for visitors to share your content" />
+        <meta name="copyright" content="Copyright (c) 2011 Add This, LLC" />
+        <link rel="shortcut icon" href="http://s7.addthis.com/static/t00/logo100100.png" />
+        <SCRIPT type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=addthis"></SCRIPT>
         <STYLE type="text/css">
             /* Footer 
 ------------------------------------------------------------------- */
@@ -82,5 +88,14 @@
                 d.body.appendChild(gaScript);
             });
         </SCRIPT>
-</BODY>
+        <DIV id="footer">
+            <DIV class="container">
+                <A href="http://www.addthis.com/personalize" class="whatsthis">Settings</A>
+                <A target="_blank" href="http://www.addthis.com/privacy" class="privacy">Privacy</A>
+                <A title="addthis.com" target="_blank" href="http://www.addthis.com/" id="atlogo-sm">AddThis</A>
+            </DIV>
+        </DIV>
+
+    </BODY>
 </HTML>
+
