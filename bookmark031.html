@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<HTML xmlns="http://www.w3.org/1999/xhtml">
+    <HEAD>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content=" AddThis is a free way to boost traffic back to your site by making it easier for visitors to share your content" />
+        <meta name="copyright" content="Copyright (c) 2011 Add This, LLC" />
+        <meta name="title" content="AddThis Social Bookmarking Sharing Button Widget" />
+        <link rel="shortcut icon" href="http://s7.addthis.com/static/t00/logo100100.png" />
+        <LINK href="bookmark031.css" rel="stylesheet" type="text/css">
+        <TITLE>AddThis Social Bookmarking Sharing Button Widget</TITLE>
+</head>
+
+<body>
+
+<div id="filter">
+    <label for="service-filter" style="position:absolute;left:-9999em;">Sharing Service Filter</label>
+    <input id="service-filter" type="text" size="30" maxlength="50" placeholder="Find a service..." />
+</div>
+<div id="main">
+    <div id="toolbox" class="addthis_toolbox addthis_default_style addthis_32x32_style">
+    </div>
+</div>
+<div id="details">
+    <p id="pgtitle">&nbsp;</p>
+    <p id="pgurl">&nbsp;</p>
+</div>
+<div id="ate-promo" align="center">
+    <h3>Share again!</h3>
+    <div id='psptb' class="addthis_toolbox addthis_default_style">
+        <a href="/" title="Facebook" onclick="addthis_sendto('facebook', addthis_config_msg, addthis_share_msg);return false;"><span class="at300bs at15nc at15t_facebook"><span class="at_a11y">Share on facebook</span></span></a>
+        <a href="/" title="Tweet This" onclick="addthis_sendto('twitter', addthis_config_msg, addthis_share_msg);return false;"><span class="at300bs at15nc at15t_twitter"><span class="at_a11y">Share on twitter</span></span></a>
+        <a id="pspmore" href="/"><span class="fake_addthis_button at300bs at15nc"></span></a>
+    <div class="atclear"></div></div>
+</div>
+
+
+<script type="text/javascript">
+    var url = window.location.href.split('#')[1],
+    lang = '';
+    if(url.search(/ui_language/)>-1)lang = url.split('ui_language%3D')[1].substr(0,2);/*operable hack to make langgs works*/
+    var addthis_config = {/*"data_track_clickback":true,*/
+        ui_language: lang
+    };
+    if(window.location.href.search(/at3frameclosereload/)>-1){
+        document.body.style.display = 'none';
+    }
+</script>
+<SCRIPT type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=addthis"></SCRIPT>
+<script>
+/* <![CDATA[ */
+
+var get=function(a){return document.getElementById(a);};addthis.addEventListener("addthis.ready",function(){_ate.xf.listen();if((_ate.bro.msi&&document.compatMode=="BackCompat")){document.getElementById("service-filter").style.backgroundPosition="330px";document.getElementById("main").style.height="300px";}_ate.ajs(_atc.rsrcs.menujs);var a=new _ate.resource.Resource("widget32.css",_atc.rsrcs.widget32css,function(){return true;}).load();});addthis.addEventListener("addthis.expanded.data.share",function(a){window.addthis_share_msg=a.target;window.addthis_share_msg.title=_duc(window.addthis_share_msg.title);window.addthis_share_msg.url=_ate.track.mgu(_duc(window.addthis_share_msg.url),window.addthis_share_msg.url_transforms||{});get("pgtitle").innerHTML=addthis_share_msg.title;get("pgurl").innerHTML=addthis_share_msg.url=typeof addthis_share_msg.url=="object"?_duc(_ate.util.toKV(addthis_share_msg.url)):addthis_share_msg.url;var b=(a.target||{}).smd;if(b&&b.sta){_ate.track.uns(b.sta);}_ate.uid=_ate.cookie.rck("uid");});addthis.addEventListener("addthis.expanded.data.config",function(a){window.addthis_config_msg=window.addthis_config=a.target;window.addthis.init();});addthis.addEventListener("addthis.expanded.share.ui_pane",function(a){switch(a.target.ui_pane){case("image"):((document.getElementById("main")||{}).style||{}).display=((document.getElementById("filter")||{}).style||{}).display=((document.getElementById("details")||{}).style||{}).display="none";_ate.share.img(a.target.image_service||"pinterest_share",window.addthis_media_msg||null);break;default:((document.getElementById("main")||{}).style||{}).display=((document.getElementById("filter")||{}).style||{}).display=((document.getElementById("details")||{}).style||{}).display="block";}});addthis.addEventListener("addthis.expanded.data.media",function(a){window.addthis_media_msg=typeof a.target=="string"?_duc((a.target||"")).split(";"):new Array();});addthis.addEventListener("addthis.menu.share",function(a){if(!a||!a.data||!a.data.service){}else{_ate.xf.send(window.parent,"addthis.menu.share",{service:a.data.service,url:a.data.url});}});addthis.addEventListener("addthis.menu.ready",function(){if(!_ate.xf.upm){var a=d.location.href.search("#ats")>-1?"#":"?",j=_ate.util.rfromKV(d.location.href.split(a)[1]);j.atm=_duc(d.location.href.split("atm=")[1]||"").split("&")[0];_ate.ed.fire("addthis.expanded.data.share",j.ats);_ate.ed.fire("addthis.expanded.data.config",j.atc);_ate.ed.fire("addthis.expanded.data.media",j.atm);_ate.ed.fire("addthis.expanded.share.ui_pane",{ui_pane:((j.atc||{}).ui_pane||null)});}else{_ate.xf.send(window.parent,"addthis.expanded.bookmark","ready");}var l=function(m){if(_atw.list[m]==undefined){return false;}var p={},o={},i=_atw.list[m],q=true;if(m=="email"){i=_atw.lang((_atw.conf||{}).ui_language||_ate.lng(),4);}else{if(m=="print"){i=_atw.lang((_atw.conf||{}).ui_language||_ate.lng(),22);}else{if(m=="favorites"){i=_atw.lang((_atw.conf||{}).ui_language||_ate.lng(),5);}else{q=false;}}}p["a.at3winsvc_"+m]="";o["span.at300bs.at15nc.at15t_"+m]="";var n=_ate.util.json2html(p);n.appendChild(_ate.util.json2html(o));n.appendChild(_ate.util.json2html({"span.at3winsvcname":i.replace("&nbsp;"," ")}));return n;},k=get("service-filter"),c=function(m){var p=window.toolbox.getElementsByTagName("a"),o=(m||"").toLowerCase();for(var n in p){if((p[n].className||"").replace("at3winsvc_","").indexOf(o)>-1||m==null){if(p[n].style){p[n].style.display="block";}}else{if(p[n].style){p[n].style.display="none";}}}},g=new Array();var f=function(){if(_ate.xf.upm){_ate.xf.send(window.parent,"addthis.expanded.close",{expanded:"close"});}else{}};for(var e in _atw.list){g.push(e);}var b=function(){if(!window.addthis_config_msg){return;}if(h){clearInterval(h);}var q=null,r=new Array();if(window.addthis_config_msg.services_expanded){var q=window.addthis_config_msg.services_expanded.split(/\,\s*/);for(var p in q){r[q[p]]=true;}}var s=null,v=new Array();if(window.addthis_config_msg.services_exclude){var s=window.addthis_config_msg.services_exclude.split(/\,\s*/);for(var p in s){v[s[p]]=true;}}var w=_atw.lang((_atw.conf||{}).ui_language||_ate.lng(),35);get("service-filter").setAttribute("placeholder",w);window.toolbox=get("toolbox");var t=_ate.util.unqconcat((_ate.cookie.rck("uss")||"").split(","),_ate.util.unqconcat((window.addthis_options||"").replace(",more","").split(","),_atw.loc.split(","))),o=t.length,n=_ate.util.unqconcat(t,g);for(var p in n){if(!n[p]||(q&&!r[n[p]])||(s&&v[n[p]])){continue;}var u=l(n[p]);if(u!==false){if(p<o){u.style.fontWeight="bold";}u.href="#";if(n[p]=="pinterest_share"&&window.addthis_media_msg==""){continue;}window.toolbox.appendChild(u);u.onclick=function(){var y=(this.className||"").replace(/at3winsvc_/,""),x={pinterest_share:true,email:true},i={favorites:true,print:true};addthis_sendto(y,addthis_config_msg,addthis_share_msg);this.blur();if(i[y]&&_ate.share.inBm()&&_ate.xf.upm){_ate.xf.send(window.parent,"addthis.expanded.close",{expanded:"close"});}if(!_ate.xf.upm&&!x[y]){document.getElementById("filter").style.display=document.getElementById("main").style.display=document.getElementById("details").style.display="none";document.getElementById("ate-promo").style.display="block";}return false;};}}var m=function(){try{k.focus();k.select();}catch(i){}setTimeout(function(){if(k.value===""){}if(!_ate.bro.ffx){}k.onfocus=function(x){if(k.value==k.defaultValue){if(!_ate.bro.ffx){}}};k.onblur=function(x){if(k.value===""){}};k.onkeydown=function(y){y=y||window.event;var x=y.keyCode?y.keyCode:y.which;if(x&&x==27){f();return;}if(k.value==k.defaultValue&&x!=9){}};k.onkeyup=function(A){A=A||window.event;var x=A.keyCode?A.keyCode:A.which;if(x&&x==27){return;}else{if(x&&(x==13||x==9)){if(window.toolbox){var z=window.toolbox.getElementsByTagName("a");}else{return;}for(var y=0;y<z.length;y++){if((z[y].className||"").search(/at3winsvc_/i)!=-1&&z[y].style.display!="none"){if(x==9){return;}else{try{z[y].click();}catch(A){z[y].focus();}return;}}}}}c(k.value);};},0);};addthis.addEventListener("addthis.expanded.reopen",function(i){m();});m();};if(window.addthis_config_msg){b();}else{var h=setInterval(b,25);}window.onkeypress=function(m){m=m||window.event;var i=m.keyCode?m.keyCode:m.which;if(i&&i==27){f();}};document.getElementById("pspmore").onclick=function(){document.getElementById("ate-promo").style.display="none";_ate.ed.fire("addthis.menu.ready");return false;};});/* ]]> */</script></body></html>
